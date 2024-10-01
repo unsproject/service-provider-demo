@@ -1,0 +1,19 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(50% - 10px);
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.date {
+  margin-top: auto;
+  text-align: right;
+  color: lightgray;
+  margin-bottom: 0;
+}

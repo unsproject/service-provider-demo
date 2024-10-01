@@ -1,0 +1,55 @@
+.btn-link {
+  width: 200px;
+  height: 100%;
+  color: white;
+  background: #08da84;
+  border-radius: 10px;
+  border-width: 0px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.btn-link:hover {
+  background: #07b66d;
+}
+.btn-try {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: #08da84;
+  border-radius: 10px;
+  border-width: 0px;
+  font-size: 1rem;
+}
+.btn-try:hover {
+  background: #07b66d;
+}
+.btn-logout {
+  width: 200px;
+  height: 100%;
+  color: white;
+  background: #da0808;
+  border-radius: 10px;
+  border-width: 0px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.btn-logout:hover {
+  background: #a80606;
+}
+.button-as-text {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.button-as-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
