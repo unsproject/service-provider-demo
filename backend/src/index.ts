@@ -6,7 +6,7 @@ import path from "path";
 import { DBImplementation } from "../db";
 import cors from "cors";
 import apiRouter from "./apiRouter";
-import { gatewayApp } from "@uns/gateway-service-app";
+import { gatewayApp } from "@unsproject/gateway-service-app";
 
 dotenv.config();
 

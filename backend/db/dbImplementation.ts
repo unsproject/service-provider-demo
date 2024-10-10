@@ -1,6 +1,6 @@
-import { DBContext } from "@uns/gateway-service-app";
+import { DBContext } from "@unsproject/gateway-service-app";
 import { AuthTicketModel } from "../model/authTicket";
-import { AuthTicket } from "@uns/common";
+import { AuthTicket } from "@unsproject/common";
 import { UserModel } from "../model/users";
 
 export class DBImplementation implements DBContext {

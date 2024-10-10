@@ -139,7 +139,7 @@ export const MainPage: FC = () => {
           ) : (
             <button
               className={classes["button-as-text"]}
-              onClick={() => handleLogin("pki")}
+              onClick={() => handleLogin("none")}
             >
               Sign In with UNS
             </button>
