@@ -4,6 +4,7 @@ import { Page } from "../page";
 import classes from "./mainPage.module.scss";
 import { useUser } from "../userContext";
 import { DataContainer } from "../data-container/dataContainer";
+import { StarRating } from "../star";
 
 interface Message {
   serviceUserId: string;
@@ -14,22 +15,22 @@ interface Message {
 const loginOptions = [
   {
     name: "Device fingerprint",
-    description: "Using easiest fsaofnsaofnsaofnsasaopkf",
+    rating: 1,
     type: "none",
   },
   {
     name: "UNS verifies user email",
-    description: "Using email fsaofjsaofjsaofjsoafjsoajf",
+    rating: 3,
     type: "email_verified",
   },
   {
     name: "Verified by WebAuthn",
-    description: "Using key jfsaofjaspofjsapofjposajfaja",
+    rating: 5,
     type: "webauthn",
   },
   {
     name: "Verified with UNS Authenticator",
-    description: "Using auth fjoisafjsaiofjsaopfjsapofjsapjf",
+    rating: 5,
     type: "pki",
   },
 ];
@@ -207,7 +208,7 @@ export const MainPage: FC = () => {
               <thead>
                 <tr>
                   <th scope="col">Name</th>
-                  <th scope="col">Description</th>
+                  <th scope="col">Security level</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -215,7 +216,9 @@ export const MainPage: FC = () => {
                 {loginOptions.map((option) => (
                   <tr key={option.type}>
                     <td>{option.name}</td>
-                    <td>{option.description}</td>
+                    <td>
+                      <StarRating rating={option.rating} />
+                    </td>
                     <td>
                       <button
                         onClick={() => handleLogin(option.type)}

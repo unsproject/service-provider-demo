@@ -18,11 +18,4 @@ apiRouter.post("/addMessage/", async (req: any, res: any) => {
     .status(200)
     .json(await MessageModel.create({ serviceUserId, name, text }));
 });
-apiRouter.get("/validate", async (req: any, res: any) => {
-  res.send(process.env.VALIDATION_CODE);
-});
-apiRouter.post("/callback", async (req: any, res: any) => {
-  console.log("callback");
-  res.send("callback function");
-});
 export default apiRouter;
