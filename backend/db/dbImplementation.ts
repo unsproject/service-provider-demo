@@ -25,7 +25,7 @@ export class DBImplementation implements DBContext {
   async updateTicketToClaimed(ticket: AuthTicket): Promise<AuthTicket> {
     const returnTicket = await AuthTicketModel.findOneAndUpdate(
       { nonce: ticket.nonce },
-      { status: "CLAIMED" },
+      { status: "CLAIMED", guardianUrl: ticket.guardianUrl },
       { new: true }
     );
     if (returnTicket) return returnTicket;
