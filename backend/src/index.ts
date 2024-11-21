@@ -31,7 +31,7 @@ app.use(
   gatewayApp(
     server,
     new DBImplementation(),
-    "https://gatekeeper.universalnameservice.com"
+    process.env.GATEKEEPER_URL || "https://gatekeeper.universalnameservice.com"
   )
 );
 
