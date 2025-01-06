@@ -1,4 +1,4 @@
-import { DBContext } from "@unsproject/gateway-service-app";
+import { DBContext } from "@unsproject/service-gateway/dist/api";
 import { AuthTicketModel } from "../model/authTicket";
 import { AuthTicket } from "@unsproject/common";
 import { UserModel } from "../model/users";
