@@ -1,6 +1,6 @@
-import { DBContext } from "@uns/gateway-service-app";
+import { DBContext } from "@unsproject/service-gateway/dist/api";
 import { AuthTicketModel } from "../model/authTicket";
-import { AuthTicket } from "@uns/common";
+import { AuthTicket } from "@unsproject/common";
 import { UserModel } from "../model/users";
 
 export class DBImplementation implements DBContext {
@@ -25,7 +25,7 @@ export class DBImplementation implements DBContext {
   async updateTicketToClaimed(ticket: AuthTicket): Promise<AuthTicket> {
     const returnTicket = await AuthTicketModel.findOneAndUpdate(
       { nonce: ticket.nonce },
-      { status: "CLAIMED" },
+      { status: "CLAIMED", guardianUrl: ticket.guardianUrl },
       { new: true }
     );
     if (returnTicket) return returnTicket;
